@@ -5,7 +5,6 @@ License: Public Domain
 """
 import sys
 import os
-import argparse
 
 # Disabling to keep from junk building up
 sys.dont_write_bytecode = True
