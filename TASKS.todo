@@ -1,0 +1,3 @@
+[_] Create this as a puppet config
+[_] Add the directory for vim files (syntax, plugins, etc)
+[_] Look into the legality of pulling in the other plugins into this repo (or atleast git subrepos)
