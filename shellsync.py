@@ -30,4 +30,4 @@ if __name__ == "__main__":
             print("[+] Creating Link for %s" % conf)
             os.symlink(src, dest)
 
-    print("[@] Comppleted")
+    print("[@] Completed")
