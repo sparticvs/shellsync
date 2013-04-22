@@ -11,8 +11,8 @@ set shiftwidth=4
 
 " I like to show the directory tree by default
 " Uncomment if NERDTree is installed
-"autocmd VimEnter * NERDTree
-"autocmd VimEnter * wincmd p
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
 
 " I like unicode chars in tagbar
 " Uncomment if Tagbar is installed
@@ -22,7 +22,7 @@ set shiftwidth=4
 set listchars=tab:»\ ,eol:¶,trail:·
 
 " Set all key mappings : : leader => \
-"map <silent> <leader>d :NERDTreeToggle<CR>
+map <silent> <leader>d :NERDTreeToggle<CR>
 map <silent> <leader>n :set nu<CR>
 map <silent> <leader>N :set nonu<CR>
 "nnoremap <silent> <leader>t :TagbarToggle<CR>
