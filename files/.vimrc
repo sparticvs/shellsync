@@ -47,13 +47,16 @@ set statusline=%{GitBranch()}\ %f\ %y\ %r%=%(%l,%c%)
 " Set Screen title (haven't converted this to TMUX yet)
 let &titleold = system('whoami') . "@" . hostname()
 let &titlestring = system('whoami') . "@" . hostname() . "(" . expand("%:t") . ")"
-if &term == "screen"
+" In Ubuntu, TMUX sets "term" to screen
+let really_screen=0
+if &term == "screen" && !exists("$TMUX")
     set t_ts=^[k
     set t_fs=^[\
+    let really_screen=1
 endif
 
 " Set the Title of the Window if it's screen, xterm
-if &term == "screen" || &term == "xterm"
+if really_screen == 1 || &term == "xterm"
     set title
 endif
 
