@@ -43,7 +43,11 @@ if [ -z "$TMUX" ]; then
     fi
 fi
 
-source $HOME/.pyenv/bin/activate
+PYTHONENV="$HOME/.pyenv/"
+
+if [ -z "$PYHTONENV/bin/activate" ]; then
+    source $PYTHONENV/bin/activate
+fi
 
 # My Shell Prompt
 PS1="%{$fg[magenta]%}%h%{$reset_color%}][%{$fg[red]%}%n%{$reset_color%}][%{$fg[blue]%}%m%{$reset_color%}][%{$fg[yellow]%}%~%{$reset_color%}§ "
