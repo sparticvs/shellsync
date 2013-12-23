@@ -28,7 +28,7 @@ export HISTFILE=$HOME/.zsh_history
 # This might be too clever. But it allows me to have multiple
 # sessions opened and it will use the same windows. This really
 # makes TMUX work like SCREEN.
-if [ -z "$TMUX" ]; then
+if [ -z "$TMUX" && -n "$DISPLAY" ]; then
     base_session='sparticvs_session'
     # Create a new session if it doesn't exist
     tmux has-session -t $base_session || tmux new-session -d -s $base_session
