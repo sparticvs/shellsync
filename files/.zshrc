@@ -28,14 +28,20 @@ export HISTFILE=$HOME/.zsh_history
 # This might be too clever. But it allows me to have multiple
 # sessions opened and it will use the same windows. This really
 # makes TMUX work like SCREEN.
-if [ -z "$TMUX" ]; then
+if [ -z "$TMUX" && -n "$DISPLAY" ]; then
     base_session='sparticvs_session'
     # Create a new session if it doesn't exist
     tmux has-session -t $base_session || tmux new-session -d -s $base_session
-    # Are there any clients connected already?
+
     client_cnt=$(tmux list-clients | wc -l)
+    # Are there any clients connected already?
     if [ $client_cnt -ge 1 ]; then
-        session_name=$base_session"-"$client_cnt
+        client_id=0
+        session_name=$base_session"-"$client_id
+        while [ $(tmux has-session -t $session_name 2>& /dev/null; echo $?) -ne 1 ]; do
+            client_id=$((client_id+1))
+            session_name=$base_session"-"$client_id
+        done
         tmux new-session -d -t $base_session -s $session_name
         tmux -2 attach-session -t $session_name \; set-option destroy-unattached
     else
@@ -43,7 +49,11 @@ if [ -z "$TMUX" ]; then
     fi
 fi
 
-source $HOME/.pyenv/bin/activate
+PYTHONENV="$HOME/.pyenv/"
+
+if [ -z "$PYHTONENV/bin/activate" ]; then
+    source $PYTHONENV/bin/activate
+fi
 
 # My Shell Prompt
 PS1="%{$fg[magenta]%}%h%{$reset_color%}][%{$fg[red]%}%n%{$reset_color%}][%{$fg[blue]%}%m%{$reset_color%}][%{$fg[yellow]%}%~%{$reset_color%}§ "
