@@ -1,13 +1,21 @@
+execute pathogen#infect()
+
+filetype plugin indent on
+syntax on
+
 " Yea, I am a fan
 colorscheme acidcupcake
 
 set number
-filetype on
 
 " Proper spacing
 set tabstop=4
 set expandtab
 set shiftwidth=4
+set backspace=2
+
+" Sane window wrapping
+set textwidth=79
 
 " I like to show the directory tree by default
 " Uncomment if NERDTree is installed
@@ -29,14 +37,14 @@ map <silent> <leader>N :set nonu<CR>
 map <silent> <leader>s :set list!<CR>
 
 " Auto complete braces (I am not the biggest fan of this)
-imap ( ()<Esc>:let leavechar=")"<CR>i
-imap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
-imap { {}<Esc>:let leavechar="}"<CR>i
-imap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-imap [ []<Esc>:let leavechar="]"<CR>i
-imap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
-imap < <><Esc>:let leavechar=">"<CR>i
-imap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
+"imap ( ()<Esc>:let leavechar=")"<CR>i
+"imap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+"imap { {}<Esc>:let leavechar="}"<CR>i
+"imap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+"imap [ []<Esc>:let leavechar="]"<CR>i
+"imap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+"imap < <><Esc>:let leavechar=">"<CR>i
+"imap <expr> >  strpart(getline('.'), col('.')-1, 1) == ">" ? "\<Right>" : ">"
 
 " Show the status lines
 set laststatus=2

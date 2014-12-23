@@ -1,0 +1,3 @@
+[submodule "files/.oh-my-zsh"]
+	path = files/.oh-my-zsh
+	url = git://github.com/sparticvs/oh-my-zsh.git
