@@ -14,6 +14,9 @@ set expandtab
 set shiftwidth=4
 set backspace=2
 
+" Unless you are HTML...
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 
+
 " Sane window wrapping
 set textwidth=79
 
