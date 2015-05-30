@@ -13,3 +13,6 @@
 [submodule "files/.vim/bundle/vim-snippets"]
 	path = files/.vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "files/.vim/bundle/tagbar"]
+	path = files/.vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar

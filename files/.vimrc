@@ -36,7 +36,7 @@ set listchars=tab:»\ ,eol:¶,trail:·
 map <silent> <leader>d :NERDTreeToggle<CR>
 map <silent> <leader>n :set nu<CR>
 map <silent> <leader>N :set nonu<CR>
-"nnoremap <silent> <leader>t :TagbarToggle<CR>
+nnoremap <silent> <leader>t :TagbarToggle<CR>
 map <silent> <leader>s :set list!<CR>
 
 " Auto complete braces (I am not the biggest fan of this)
