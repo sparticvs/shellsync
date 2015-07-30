@@ -16,3 +16,6 @@
 [submodule "files/.vim/bundle/tagbar"]
 	path = files/.vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar
+[submodule "files/.vim/bundle/vim-latex"]
+	path = files/.vim/bundle/vim-latex
+	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
