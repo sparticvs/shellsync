@@ -31,7 +31,7 @@ export HISTFILE=$HOME/.zsh_history
 # sessions opened and it will use the same windows. This really
 # makes TMUX work like SCREEN.
 if [ -z "$TMUX" ] && [ -z "$DISPLAY" ] && [ -z "$TERM_PROGRAM" ]; then
-    base_session="$USER_session"
+    base_session="${USER}_session"
     # Create a new session if it doesn't exist
     tmux has-session -t $base_session || tmux new-session -d -s $base_session
 

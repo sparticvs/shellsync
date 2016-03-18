@@ -102,3 +102,5 @@ set t_Co=256
 command -nargs=0 Convert :%s/\t/    /g
 command -nargs=0 CheckStyle :!pep8 %:p
 command -nargs=0 Pylint :rightb :15sview .pylintresults | setlocal buftype=nofile noswapfile bufhidden=delete | silent :r !pylint #
+
+let g:Imap_FreezeImap=1
