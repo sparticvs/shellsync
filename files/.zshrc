@@ -65,6 +65,4 @@ ZSH_THEME="sparticvs"
 plugins=(git brew vagrant)
 setopt prompt_subst
 source $ZSH/oh-my-zsh.sh
-
-# Mac and ZSH do colors wierd..this is the fix
-zstyle ':completion:*' list-colors 'di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+unset LSCOLORS
