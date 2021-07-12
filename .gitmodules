@@ -19,3 +19,6 @@
 [submodule "files/.vim/bundle/vim-latex"]
 	path = files/.vim/bundle/vim-latex
 	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
+[submodule "files/.vim/bundle/typescript-vim"]
+	path = files/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
