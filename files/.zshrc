@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
+
 export ZSH=$HOME/.oh-my-zsh
 
 # I like color. Easier to read
@@ -12,7 +19,7 @@ export PYTHONDONTWRITEBYTECODE=1
 # Don't clobber files
 set -o noclobber
 
-alias ls='ls -G'
+alias ls='ls --color=always'
 # alias grep='grep --color=auto'
 # alias fgrep='fgrep --color=auto'
 # alias egrep='egrep --color=auto'
@@ -59,10 +66,13 @@ fi
 
 # My Shell Prompt
 export DISABLE_UNTRACKED_FILES_DIRTY="true"
-ZSH_THEME="sparticvs"
-#PROMPT='%{$fg[magenta]%}%h%{$reset_color%}][%{$fg[red]%}%n%{$reset_color%}][%{$fg[blue]%}%m%{$reset_color%}]$(git_prompt)[%{$fg[yellow]%}%~%{$reset_color%}§ '
+#ZSH_THEME="sparticvs"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git brew vagrant)
+plugins=(git brew vagrant virtualenv)
 setopt prompt_subst
 source $ZSH/oh-my-zsh.sh
 unset LSCOLORS
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
