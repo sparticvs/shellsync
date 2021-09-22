@@ -1,6 +1,6 @@
 [submodule "files/.oh-my-zsh"]
 	path = files/.oh-my-zsh
-	url = ssh://github.com/sparticvs/oh-my-zsh.git
+	url = https://github.com/sparticvs/oh-my-zsh.git
 [submodule "files/.vim/bundle/tlib_vim"]
 	path = files/.vim/bundle/tlib_vim
 	url = https://github.com/tomtom/tlib_vim.git
