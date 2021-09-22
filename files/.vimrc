@@ -104,3 +104,4 @@ command -nargs=0 CheckStyle :!pep8 %:p
 command -nargs=0 Pylint :rightb :15sview .pylintresults | setlocal buftype=nofile noswapfile bufhidden=delete | silent :r !pylint #
 
 let g:Imap_FreezeImap=1
+let g:snipMate = { 'snippet_version' : 1 }
