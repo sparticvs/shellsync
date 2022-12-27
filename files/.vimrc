@@ -16,6 +16,7 @@ set backspace=2
 
 " Unless you are HTML...
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 
+autocmd FileType javascript setlocal sw=2 ts=2 et
 
 " Sane window wrapping
 set textwidth=79

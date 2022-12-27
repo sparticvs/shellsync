@@ -19,7 +19,11 @@ export PYTHONDONTWRITEBYTECODE=1
 # Don't clobber files
 set -o noclobber
 
-alias ls='ls --color=always'
+if [ $(uname) = "Darwin" ]; then
+    alias ls='ls -G'
+else
+    alias ls='ls --color=always'
+fi
 # alias grep='grep --color=auto'
 # alias fgrep='fgrep --color=auto'
 # alias egrep='egrep --color=auto'
@@ -73,6 +77,10 @@ plugins=(git brew vagrant virtualenv)
 setopt prompt_subst
 source $ZSH/oh-my-zsh.sh
 unset LSCOLORS
+
+export EDITOR=vim
+export PATH=$HOME/Library/Android/sdk/platform-tools:$HOME/.cargo/bin:$PATH:/usr/local/share/npm/bin
+alias python=/usr/local/bin/python3.6
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
